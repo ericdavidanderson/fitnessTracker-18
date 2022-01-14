@@ -1,5 +1,5 @@
 const API = {
-  async getLastWorkout() {
+  async getFinalWorkout() {
     let res;
     try {
       res = await fetch("/api/workouts");
@@ -35,7 +35,7 @@ const API = {
     return json;
   },
 
-  async getWorkoutsInRange() {
+  async getWorkoutsRange() {
     const res = await fetch(`/api/workouts/range`);
     const json = await res.json();
 
