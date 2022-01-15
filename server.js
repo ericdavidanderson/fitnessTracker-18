@@ -1,12 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const apiRoutes = require("./routes/api-routes");
-const htmlRoutes = require("./routes/html-routes");
+const apiRts = require("./routes/api-routes");
+const htmlRts = require("./routes/html-routes");
 const logger = require("morgan");
 const db = require("./models");
 
 // setting PORT
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3023;
 
 // creating instance of express
 const app = express();
@@ -21,12 +21,12 @@ app.use(express.json());
 // reads public folder
 app.use(express.static("public"));
 // use routes
-app.use(apiRoutes);
-app.use(htmlRoutes);
+app.use(apiRts);
+app.use(htmlRts);
 
 // mongoose connection
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/fitness-tracker",
+  process.env.MONGODB_URI || "mongodb://localhost/FITNESSTRACKER-18",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -37,17 +37,17 @@ mongoose.connect(
 
 const connection = mongoose.connection;
 
-// if successful mongoose connection
+//  successful connection
 connection.on("connected", () => {
-  console.log("Mongoose connected successfully.");
+  console.log("Mongoose connected.");
 });
 
-// if unsuccessful mongoose connection
+//unsuccessful connection
 connection.on("error", (err) => {
-  console.log("Mongoose connected error:" + err);
+  console.log("Mongoose connection error:" + err);
 });
 
-// listen on the PORT
+// listen to PORT
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
