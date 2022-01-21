@@ -25,15 +25,12 @@ app.use(apiRts);
 app.use(htmlRts);
 
 // mongoose connection
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/workout",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+});
 
 const connection = mongoose.connection;
 
