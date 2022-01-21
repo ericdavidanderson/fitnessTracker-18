@@ -26,7 +26,7 @@ app.use(htmlRts);
 
 // mongoose connection
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/FITNESSTRACKER-18",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/workout",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

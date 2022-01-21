@@ -57,31 +57,31 @@ function validateInputs() {
       isValid = false;
     }
 
-    if (weightInput.value.trim() === "") {
+    if (weightInput.value.trim() === " ") {
       isValid = false;
     }
 
-    if (setsInput.value.trim() === "") {
+    if (setsInput.value.trim() === " ") {
       isValid = false;
     }
 
-    if (repsInput.value.trim() === "") {
+    if (repsInput.value.trim() === " ") {
       isValid = false;
     }
 
-    if (resistanceDurationInput.value.trim() === "") {
+    if (resistanceDurationInput.value.trim() === " ") {
       isValid = false;
     }
   } else if (workoutType === "cardio") {
-    if (cardioNameInput.value.trim() === "") {
+    if (cardioNameInput.value.trim() === " ") {
       isValid = false;
     }
 
-    if (durationInput.value.trim() === "") {
+    if (durationInput.value.trim() === " ") {
       isValid = false;
     }
 
-    if (distanceInput.value.trim() === "") {
+    if (distanceInput.value.trim() === " ") {
       isValid = false;
     }
   }
@@ -127,14 +127,14 @@ function handleToastAnimationEnd() {
 }
 
 function clearInputs() {
-  cardioNameInput.value = " ";
-  nameInput.value = " ";
-  setsInput.value = " ";
-  distanceInput.value = " ";
-  durationInput.value = " ";
-  repsInput.value = " ";
-  resistanceDurationInput.value = " ";
-  weightInput.value = " ";
+  cardioNameInput.value = "";
+  nameInput.value = "";
+  setsInput.value = "";
+  distanceInput.value = "";
+  durationInput.value = "";
+  repsInput.value = "";
+  resistanceDurationInput.value = "";
+  weightInput.value = "";
 }
 
 if (workoutTypeSelect) {
