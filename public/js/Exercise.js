@@ -53,7 +53,7 @@ function validateInputs() {
   let isValid = true;
 
   if (workoutType === "resistance") {
-    if (nameInput.value.trim() === "") {
+    if (nameInput.value.trim() === " ") {
       isValid = false;
     }
 
@@ -127,14 +127,14 @@ function handleToastAnimationEnd() {
 }
 
 function clearInputs() {
-  cardioNameInput.value = "";
-  nameInput.value = "";
-  setsInput.value = "";
-  distanceInput.value = "";
-  durationInput.value = "";
-  repsInput.value = "";
-  resistanceDurationInput.value = "";
-  weightInput.value = "";
+  cardioNameInput.value = " ";
+  nameInput.value = " ";
+  setsInput.value = " ";
+  distanceInput.value = " ";
+  durationInput.value = " ";
+  repsInput.value = " ";
+  resistanceDurationInput.value = " ";
+  weightInput.value = " ";
 }
 
 if (workoutTypeSelect) {
